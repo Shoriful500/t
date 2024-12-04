@@ -60,6 +60,38 @@
     // You need to add your user reward function here, which will be executed after the user watches the ad.
     // For more details, please refer to the detailed instructions.
     })
+        // Increase points and balance on ad completion
+                    points += 10;  
+                    balance += 0.008;
+                    localStorage.setItem('userPoints', points);
+                    localStorage.setItem('userBalance', balance.toFixed(2));
+                    document.getElementById('userPoints').textContent = points;
+                    document.getElementById('userBalance').textContent = balance.toFixed(2);
+
+                }).catch(error => {
+                    console.error('Ad error:', error);
+                });
+            } else {
+            }
+        }
+        
+        
+        
+        
+        function updateBalance() {
+            document.getElementById('userPoints').textContent = points;
+            document.getElementById('userBalance').textContent = balance.toFixed(2);
+
+            localStorage.setItem('userPoints', points);
+            localStorage.setItem('userBalance', balance.toFixed(2));
+        }
+        
+        
+        
+document.addEventListener("contextmenu", function(e) {
+        e.preventDefault();
+        alert("Right-click isn't allowed!");
+    });
         
         
          function autoRefresh() {
