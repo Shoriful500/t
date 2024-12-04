@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monetag Ads Button</title>
+    <script src='//niphaumeenses.net/vignette.min.js' data-zone='8604925' data-sdk='show_8604925'></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffd700;
+            padding: 20px;
+            box-sizing: border-box;
+            padding-bottom: 90px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #e5c100;
+            transform: scale(1.05);
+        }
+        #ad-container {
+            margin-top: 30px;
+            margin-border: 20px
+            display: showAd;
+            display: reward;
+            display: viewport;
+            display: Show;
+
+            
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Monetag Ads Example</h1>
+    <button onclick="showAd()">ADS AUTO REFRESH</button>
+    <body onload="autoRefresh()">
+
+    <div id="ad-container">
+        <!-- Monetag Ads Script -->
+        <script src='//niphaumeenses.net/vignette.min.js' data-zone='8604925' data-sdk='show_8604925'></script>
+        <!-- End of Monetag Ads Script -->
+    </div>
+    <script>
+     show_8604925().then(() => {
+    // You need to add your user reward function here, which will be executed after the user watches the ad.
+    // For more details, please refer to the detailed instructions.
+    })
+        
+        
+         function autoRefresh() {
+            setTimeout(function() {
+                location.reload(); // পেজ রিফ্রেশ
+            }, 19000); // ৫ সেকেন্ড (৫০০০ মিলিসেকেন্ড)
+        }
+
+    </script>
+
+</body>
+</html>
